@@ -7,6 +7,13 @@ Clear compiled files.
 from os import path
 from setuptools import setup
 
+long_description = open(
+    path.join(
+        path.dirname(__file__),
+        'README.rst'
+    )
+).read()
+
 
 setup(
     name='fclear',
@@ -16,7 +23,7 @@ setup(
     author='Ayun Park',
     author_email='iamparkayun@gmail.com',
     description='Clear compiled files.',
-    long_description='Clear compiled files.',
+    long_description=long_description,
     packages=['fclear'],
     classifiers=[
         'License :: OSI Approved :: MIT License',
