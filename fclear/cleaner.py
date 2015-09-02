@@ -35,13 +35,11 @@ class Cleaner(object):
                     self.clear(full_path)
             else:
                 try:
-                    if _file.split('.')[1] in self.extensions_to_delete:
+                    if _file.split('.')[::-1][0] in self.extensions_to_delete:
                         remove(full_path)
                         print('Removed', full_path)
                 except OSError:
                     print('Permission denied', full_path)
-                except IndexError:
-                    pass
 
     def run(self):
         try:
