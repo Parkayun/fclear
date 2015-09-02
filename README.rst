@@ -29,4 +29,5 @@ Quick start
    ~ $ fclear py                  # Remove pyc, __pycache__
    ~ $ fclaer vim                 # Remove swp
    ~ $ fclear vi                  # Remove swp
+   ~ $ fclear java                # Remove class
 
