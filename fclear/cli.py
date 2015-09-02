@@ -12,5 +12,3 @@ def run():
 
     cleaner = Cleaner(language)
     cleaner.run()
-
-run()
