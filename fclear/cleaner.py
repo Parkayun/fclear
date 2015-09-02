@@ -17,6 +17,8 @@ class Cleaner(object):
         if not hasattr(self, '__extension__'):
             if self.language in ('py', 'python',):
                 self.__extension__ = ('pyc', '__pycache__',)
+            elif self.language in ('vi', 'vim',):
+                self.__extension__ = ('swp')
             else:
                 raise LanguageNotFound
         return self.__extension__
