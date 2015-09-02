@@ -15,7 +15,7 @@ class Cleaner(object):
     @property
     def extensions_to_delete(self):
         if not hasattr(self, '__extension__'):
-            if self.language in ('py', 'python'):
+            if self.language in ('py', 'python',):
                 self.__extension__ = ('pyc', '__pycache__',)
             else:
                 raise LanguageNotFound
@@ -28,6 +28,7 @@ class Cleaner(object):
                 if _file in self.extensions_to_delete:
                     try:
                         rmtree(full_path)
+                        print('Removed', ''.join((full_path, '/')))
                     except OSError:
                         print('Permission denied', full_path)
                 else:
